@@ -1,2 +1,0 @@
-document.getElementById('year').textContent=new Date().getFullYear();
-const menu=document.querySelector('.menu');const links=document.querySelector('.links');if(menu)menu.addEventListener('click',()=>links.classList.toggle('mobile-open'));
