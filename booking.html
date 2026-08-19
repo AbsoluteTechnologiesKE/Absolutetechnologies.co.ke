@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Book a Service | Absolute Technologies</title><link rel="stylesheet" href="style.css">
+<style>
+.booking-wrap{padding:55px 0 70px;background:#f7f9fe}.booking-card{max-width:900px;margin:auto;background:#fff;border:1px solid #e1e7f2;border-radius:16px;box-shadow:0 14px 40px rgba(7,35,110,.1);padding:35px}.booking-card h2{text-align:center;font-size:32px;color:#07184b;margin-bottom:8px}.booking-intro{text-align:center;color:#526078;max-width:650px;margin:0 auto 30px}.booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-weight:800;color:#142451;font-size:14px}.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1px solid #d6deec;border-radius:8px;font:inherit}.field textarea{min-height:125px;resize:vertical}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}.submit{border:0;cursor:pointer;background:#0639b9;color:#fff;padding:14px 28px;border-radius:8px;font-weight:800;font-size:16px}.wa{background:#13c96b;color:#fff;padding:14px 28px;border-radius:8px;font-weight:800}.note{text-align:center;color:#68748c;font-size:13px;margin-top:18px}.success{display:none;background:#eafaf1;border:1px solid #a9e4c3;color:#116c3c;padding:15px;border-radius:9px;margin-top:20px;text-align:center;font-weight:700}@media(max-width:720px){.booking-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.booking-card{padding:23px}}
+</style></head><body>
+<div class="topbar"><div class="container"><div class="top-left">🚀 Fast • Reliable • Affordable IT Services</div><div class="top-right"><a href="tel:0712382925">☎ 0712382925</a><span>|</span><a href="mailto:Absolutetechnologies738@gmail.com">✉ Email</a><a class="social" href="https://wa.me/254712382925" target="_blank">◉</a></div></div></div>
+<header class="header"><div class="container"><a href="index.html"><img class="logo" src="assets/logo.png" alt="Absolute Technologies logo"></a><button class="menu" onclick="toggleMenu()">☰</button><nav class="nav" id="nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a class="active" href="booking.html">Book a Service</a><a href="contact.html">Contact</a></nav></div></header>
+<section class="page-hero"><div class="container"><h1>Book a Service</h1><p>Tell us what you need and choose a convenient date and time. We'll contact you to confirm.</p></div></section>
+<section class="booking-wrap"><div class="container"><div class="booking-card">
+<h2>Request a Service</h2><p class="booking-intro">Complete the form below. Your booking details will be prepared for WhatsApp so you can send them directly to Absolute Technologies.</p>
+<form id="bookingForm"><div class="booking-grid">
+<div class="field"><label>Full Name *</label><input id="name" required placeholder="Your full name"></div>
+<div class="field"><label>Phone Number *</label><input id="phone" type="tel" required placeholder="0712382925"></div>
+<div class="field"><label>Email Address</label><input id="email" type="email" placeholder="you@example.com"></div>
+<div class="field"><label>Service Required *</label><select id="service" required><option value="">Select a service</option><option>Computer / Laptop Repair</option><option>Printer Sales & Repairs</option><option>Networking & Wi-Fi</option><option>QuickBooks Solutions</option><option>Software Installation</option><option>Data & Security</option><option>Computer Upgrades</option><option>Hardware / Accessories</option><option>CCTV Services</option><option>Other IT Service</option></select></div>
+<div class="field"><label>Preferred Date *</label><input id="date" type="date" required></div>
+<div class="field"><label>Preferred Time *</label><select id="time" required><option value="">Select a time</option><option>8:00 AM - 10:00 AM</option><option>10:00 AM - 12:00 PM</option><option>12:00 PM - 2:00 PM</option><option>2:00 PM - 4:00 PM</option><option>4:00 PM - 6:00 PM</option></select></div>
+<div class="field full"><label>Location / Area</label><input id="location" placeholder="Where should the service be provided?"></div>
+<div class="field full"><label>Describe the Problem / Request *</label><textarea id="details" required placeholder="Briefly tell us what you need help with..."></textarea></div>
+</div><div class="actions"><button class="submit" type="submit">📅 Send Booking Request</button><a class="wa" href="https://wa.me/254712382925" target="_blank">💬 WhatsApp Us</a></div><p class="note">Your request is not confirmed until Absolute Technologies confirms availability.</p><div class="success" id="success">Your booking details are ready. WhatsApp should open now — tap Send to submit.</div></form>
+</div></div></section>
+<footer><div class="container"><div class="copyright">© 2026 Absolute Technologies. All Rights Reserved.</div></div></footer>
+<a class="whatsapp" href="https://wa.me/254712382925" target="_blank">◉</a>
+<script>
+function toggleMenu(){document.getElementById('nav').classList.toggle('open')}
+document.getElementById('date').min=new Date().toISOString().split('T')[0];
+document.getElementById('bookingForm').addEventListener('submit',function(e){e.preventDefault();
+const g=id=>document.getElementById(id).value.trim(), d=g('date');
+const pretty=d?new Date(d+'T00:00:00').toLocaleDateString('en-KE',{day:'numeric',month:'long',year:'numeric'}):'';
+const msg=`Hello Absolute Technologies,\n\nI would like to book a service.\n\nName: ${g('name')}\nPhone: ${g('phone')}\nEmail: ${g('email')||'Not provided'}\nService: ${g('service')}\nPreferred Date: ${pretty}\nPreferred Time: ${g('time')}\nLocation: ${g('location')||'Not provided'}\n\nProblem / Request:\n${g('details')}\n\nPlease confirm availability. Thank you.`;
+document.getElementById('success').style.display='block';window.open('https://wa.me/254712382925?text='+encodeURIComponent(msg),'_blank');
+});
+</script></body></html>
