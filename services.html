@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Absolute Technologies</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body{margin:0;font-family:Arial,sans-serif;color:#172033;background:#f7f9fc}.container{width:min(1120px,92%);margin:auto}
+header{background:#fff;border-bottom:1px solid #e5e7eb}.header-inner{height:90px;display:flex;align-items:center;justify-content:space-between}.logo{max-height:68px;max-width:220px}
+nav a{margin-left:24px;text-decoration:none;color:#172033;font-weight:700}.active{color:#0b55d4}
+.hero{background:linear-gradient(135deg,#071a45,#0b55d4);color:#fff;text-align:center;padding:70px 20px}.hero h1{font-size:48px;margin:8px}.hero p{font-size:18px;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:65px 0}.card{background:#fff;border-radius:18px;padding:28px;box-shadow:0 8px 28px #dfe5ef}.card h2{font-size:21px;color:#0b55d4}.card p{line-height:1.6;color:#596579}.card li{line-height:1.9}.icon{font-size:34px}.featured{border:2px solid #0b55d4}
+.cta{text-align:center;background:#071a45;color:white;padding:55px 20px}.btn{display:inline-block;padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:700;margin:5px}.call{background:#fff;color:#0b55d4}.wa{background:#20b45b;color:#fff}
+footer{text-align:center;padding:25px;background:#fff}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.grid{grid-template-columns:1fr}nav a{margin-left:8px;font-size:13px}.hero h1{font-size:38px}}
+</style>
+</head>
+<body>
+<header><div class="container header-inner">
+<a href="index.html"><img src="assets/logo.png" class="logo" alt="Absolute Technologies"></a>
+<nav><a href="index.html">Home</a><a href="about.html">About</a><a class="active" href="services.html">Services</a><a href="booking.html">Booking</a><a href="contact.html">Contact</a></nav>
+</div></header>
+
+<section class="hero"><div class="container"><p>ABSOLUTE TECHNOLOGIES</p><h1>Our Services</h1><p>Fast • Reliable • Affordable IT solutions for homes, offices and businesses.</p></div></section>
+
+<main class="container"><div class="grid">
+<article class="card"><div class="icon">💻</div><h2>IT SUPPORT</h2><p>Reliable technical support for homes and businesses.</p><ul><li>Technical Support</li><li>System Maintenance</li><li>Network Setup</li><li>Data Backup & Recovery</li><li>Security & Antivirus</li></ul></article>
+
+<article class="card"><div class="icon">🖥️</div><h2>HARDWARE SALES</h2><p>Quality equipment and accessories for your technology needs.</p><ul><li>Laptops & Desktops</li><li>Printers & Scanners</li><li>Accessories</li><li>Cartridges, Ink & Cables</li><li>UPS & Power Solutions</li></ul></article>
+
+<article class="card"><div class="icon">QB</div><h2>QUICKBOOKS SOLUTIONS</h2><p>Practical QuickBooks solutions for businesses.</p><ul><li>Sales & Installation</li><li>Setup & Configuration</li><li>User Training</li><li>Data Migration & Cleanup</li><li>Troubleshooting & Support</li><li>Bookkeeping Services</li></ul></article>
+
+<article class="card"><div class="icon">⚙️</div><h2>SOFTWARE SOLUTIONS</h2><p>Software installation and support to keep your systems productive.</p><ul><li>Windows Installation</li><li>Microsoft Office</li><li>Business Software</li><li>Software Installation</li><li>Troubleshooting</li></ul></article>
+
+<article class="card"><div class="icon">🛡️</div><h2>DATA & SECURITY</h2><p>Protection for your important data and systems.</p><ul><li>Data Backup</li><li>Cloud Storage Setup</li><li>Antivirus Protection</li><li>User Access Management</li></ul></article>
+
+<article class="card"><div class="icon">🔧</div><h2>COMPUTER & PRINTER REPAIRS</h2><p>Professional repairs and troubleshooting.</p><ul><li>Laptop & Computer Repairs</li><li>Computer Upgrades</li><li>Printer Sales</li><li>Printer Repairs</li><li>Printer Installation</li></ul></article>
+
+<article class="card"><div class="icon">🌐</div><h2>NETWORKING & TROUBLESHOOTING</h2><p>Connectivity solutions for homes and businesses.</p><ul><li>Internet Installation</li><li>Network Setup</li><li>Wi-Fi Troubleshooting</li><li>Network Maintenance</li><li>Connectivity Troubleshooting</li></ul></article>
+
+<article class="card featured"><div class="icon">📹</div><h2>CCTV SERVICES</h2><p>Professional CCTV security solutions.</p><ul><li>CCTV Installation & Setup</li><li>CCTV Maintenance</li><li>Remote Access via Mobile Phone</li></ul></article>
+
+<article class="card"><div class="icon">🧰</div><h2>OTHER SERVICES</h2><p>Additional technology services tailored to your needs.</p><ul><li>Computer Upgrades</li><li>Internet Installation</li><li>Printer Repairs</li><li>IT Consulting</li><li>Custom Technology Solutions</li><li><strong>CCTV Services (Installation & Setup)</strong></li></ul></article>
+</div></main>
+
+<section class="cta"><h2>Need a Technology Solution?</h2><p>Contact Absolute Technologies today.</p><a class="btn call" href="tel:0712382925">Call Now</a><a class="btn wa" href="https://wa.me/254712382925">WhatsApp Us</a></section>
+<footer>© <span id="year"></span> Absolute Technologies • 0712382925</footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body></html>
